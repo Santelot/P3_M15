@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook P3-M15</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { width: 95%; margin: auto; }
+        .dropdown { margin-bottom: 20px; }
+        .time-title, .level-title { font-size: 1.2em; font-weight: bold; }
+        .activity { margin-bottom: 30px; }
+        .banner { background-color: #4CAF50; color: white; padding: 10px; cursor: pointer; }
+        .title { font-weight: bold; }
+        .subtitle { font-style: italic; }
+        .content { display: none; padding: 10px; border: 1px solid #ddd; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook P3-M15</h1>
+        
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="45">45 minutos</option>
+                <option value="40">40 minutos</option>
+            </select>
+        </div>
+
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+
+<!-- Actividad 0 -->
+<div id="activity-0" class="activity">
+    <div class="banner" onclick="toggleContent('revision_mision')">
+        <div class="title">📚 Actividad 0: Revisión de Misión ⏰ Tiempo: No especificado</div>
+        <div class="subtitle">Revisar la disponibilidad de materiales necesarios para la misión.</div>
+    </div>
+    <div id="revision_mision" class="content" style="display: none;">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (No especificado):</strong> Proyectar Diapositiva 1: Revisar la disponibilidad de materiales (Magic Tablets, etc.).</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> No hay diálogo para los estudiantes, esta actividad es interna del profesor.</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        content.style.display = (content.style.display === "block") ? "none" : "block";
+    }
+</script>
+<!-- Actividad 1 -->
+<div id="activity-1" class="activity">
+    <div class="banner" onclick="toggleContent('saludo_ritual')">
+        <div class="title">🎉 Actividad 1: Saludo y Ritual Gnius Club ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Dar la bienvenida y preparar el ambiente para el aprendizaje.</div>
+    </div>
+    <div id="saludo_ritual" class="content" style="display: none;">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Proyectar Diapositiva 2: Saludar a los estudiantes por su nombre y presentar el tema del día.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Hola Genios! ¿Listos para aprender algo increíble hoy? Hoy vamos a repasar los conceptos de programación que aprendimos y, ¡trabajaremos en equipo para hacer paper programming!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Proyectar Diapositiva 3: Pedir que elijan una posición para indicar su estado de ánimo.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Si están emocionados por aprender algo nuevo, ¡levanten los brazos! Si necesitan un poco más de energía, crucen los brazos."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 3 (0.5 minutos):</strong> Proyectar Diapositiva 4: Guiar a los estudiantes en el ritual de agradecimiento.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Ahora, vamos a juntar nuestras manos y dar las gracias por lo que vamos a aprender hoy. ¡Gracias por estar aquí, Genios! Hoy va a ser un gran día de aprendizaje y trabajo en equipo."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 4 (1 minuto):</strong> Proyectar Diapositiva 5: Explicar los dos objetivos del día.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Hoy tenemos dos grandes objetivos: 1) Repasar los conceptos de programación que hemos aprendido. 2) Trabajar en equipo para realizar paper programming."</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 2 -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('innovacion_dia')">
+        <div class="title">💡 Actividad 2: Innovación del Día ⏰ Tiempo: 4.5 minutos</div>
+        <div class="subtitle">Introducir el concepto de programación procedural en videojuegos.</div>
+    </div>
+    <div id="innovacion_dia" class="content" style="display: none;">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Proyectar Diapositiva 6: Explicar brevemente cómo la programación procedural permite generar automáticamente mundos, niveles o personajes.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Genios, hoy veremos una innovación increíble: la programación procedural. ¿Alguna vez han jugado un videojuego que genera un mundo nuevo cada vez que juegas? ¡Esa es la magia de la programación procedural, y está en juegos como NO MAN´S SKY!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (2 minutos):</strong> Proyectar Diapositiva 7: Reproducir un video de 1 minuto sobre cómo la programación procedural genera mundos o personajes en videojuegos.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Vamos a ver cómo los videojuegos utilizan la programación procedural para generar mundos o niveles sin que los diseñadores creen todo manualmente. ¡Esto permite tener experiencias únicas cada vez que juegas!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 3 (2 minutos):</strong> Proyectar Diapositiva 8: Hacer preguntas para que los estudiantes reflexionen sobre cómo la programación procedural puede usarse en sus proyectos de videojuegos.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¿Cómo creen que podrían usar la programación procedural para crear algo nuevo en sus proyectos? ¿Qué tipo de mundos o personajes podrían generar automáticamente con código?"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 3 -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('brain_gym')">
+        <div class="title">🧠 Actividad 3: Brain Gym ⏰ Tiempo: 5.5 minutos</div>
+        <div class="subtitle">Repaso de bloques de programación en Scratch.</div>
+    </div>
+    <div id="brain_gym" class="content" style="display: none;">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Proyectar Diapositiva 9: Anunciar que repasarán todos los bloques de Scratch que han aprendido.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Genios! Vamos a activar nuestras mentes repasando todos los bloques que hemos aprendido en Scratch. ¡Presten atención, porque estos bloques serán la base para nuestro próximo proyecto!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Proyectar Diapositiva 10: Mostrar los bloques de movimiento con ejemplos de uso.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "El bloque de movimiento es la base para que tu personaje se desplace. ¿Recuerdan cómo usamos el bloque 'mover 10 pasos' para que el personaje avance en el escenario? ¡También podemos usar 'girar 15 grados' para hacer que se mueva en diferentes direcciones!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 3 (0.5 minutos):</strong> Proyectar Diapositiva 11: Mostrar los bloques de apariencia con ejemplos prácticos.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Con los bloques de apariencia, puedes cambiar lo que dice y cómo se ve tu personaje. Por ejemplo, usamos el bloque 'decir hola por 2 segundos' para que tu personaje interactúe con el jugador, y 'cambiar disfraz' para que cambie su apariencia."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 4 (0.5 minutos):</strong> Proyectar Diapositiva 12: Mostrar los bloques de eventos y cómo inician scripts.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Los bloques de eventos son lo que desencadenan las acciones en Scratch. Por ejemplo, usamos el bloque 'al presionar bandera verde' para que el código empiece cuando queremos. También podemos hacer que un personaje reaccione cuando se presiona una tecla específica."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 5 (0.5 minutos):</strong> Proyectar Diapositiva 13: Mostrar los bloques de sensores con ejemplos de interacción.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Los sensores permiten que tu personaje responda a lo que pasa en el escenario. Por ejemplo, usamos 'si tocando color' para detectar si el personaje choca con algo o 'tocar el borde' para hacer que reaccione cuando llega al límite de la pantalla."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 6 (0.5 minutos):</strong> Proyectar Diapositiva 14: Mostrar los bloques de control con ejemplos de uso en bucles.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Los bloques de control avanzados nos permiten repetir acciones usando bucles. Por ejemplo, usamos 'repetir 10 veces' para que una acción se repita una y otra vez, y también podemos usar 'por siempre' para que algo nunca se detenga, como el movimiento de un personaje."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 7 (0.5 minutos):</strong> Proyectar Diapositiva 15: Mostrar los bloques de transmisión de mensajes y cómo los personajes se comunican.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Con los bloques de transmisión de mensajes, nuestros personajes pueden 'hablar' entre sí. Usamos 'enviar mensaje a todos' para hacer que uno de ellos mande una señal a los demás, como un comando para que empiecen o detengan algo en el juego."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 8 (1 minuto):</strong> Proyectar Diapositiva 16: Mostrar los bloques de condicionales y ejemplos de decisiones.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Los bloques condicionales permiten que tu personaje tome decisiones, como 'si está tocando el borde, entonces cambiar dirección'. Con este bloque, tu programa puede responder a diferentes situaciones, como elegir qué hacer según lo que suceda en el juego."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 9 (1 minuto):</strong> Proyectar Diapositiva 17: Mostrar cómo se crean y utilizan variables.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Las variables nos permiten guardar información, como los puntos de un juego. Por ejemplo, usamos 'cambiar puntuación por 1' para actualizar los puntos cuando el personaje hace algo bueno. ¡Son muy útiles para llevar un registro de lo que sucede!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 10 (1 minuto):</strong> Proyectar Diapositiva 18: Hacer preguntas para que los estudiantes reflexionen sobre cómo usarán estos bloques en su proyecto.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Ahora que hemos repasado todos los bloques, ¿cómo creen que podrían usarlos para hacer su videojuego más interesante? ¿Qué tipo de bloque será el más importante en su proyecto?"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 4 -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('brain_vitamin')">
+        <div class="title">💪 Actividad 4: Brain Vitamin ⏰ Tiempo: 4 minutos</div>
+        <div class="subtitle">Ejercicio de secuencia de movimientos físicos para conectar conceptos de programación.</div>
+    </div>
+    <div id="brain_vitamin" class="content" style="display: none;">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Proyectar Diapositiva 19: Explicar que harán un ejercicio que conecte movimientos físicos con conceptos de programación.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Genios! Vamos a activar nuestras mentes y nuestros cuerpos con una secuencia de movimientos para prepararnos para el paper programming. ¡Movámonos con lógica!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Proyectar Diapositiva 20: Guiar el ejercicio de secuencias con movimientos simples. Ejemplo: avanzar, girar, retroceder, saltar.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Vamos a hacer una secuencia de movimientos: 2 pasos hacia adelante, giramos a la derecha, 1 paso hacia atrás, y luego saltamos una vez. ¡Es como si programáramos nuestro cuerpo!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 3 (1 minuto):</strong> Sin diapositiva: Explicar cómo los movimientos se pueden repetir varias veces.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Ahora que hemos hecho la secuencia una vez, ¡vamos a repetirla 3 veces seguidas! Esto es como un bucle en programación: repetimos los mismos pasos varias veces hasta cumplir el objetivo."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 4 (1 minuto):</strong> Sin diapositiva: Reflexionar sobre cómo el ejercicio se relaciona con los bloques de programación.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Muy bien, Genios! Acabamos de hacer un bucle con nuestro cuerpo, repitiendo una secuencia de movimientos. Así programamos en Scratch: repetimos acciones con bucles para mover personajes o cambiar apariencias."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 5 (0.5 minutos):</strong> Proyectar Diapositiva 21: Pedir a los estudiantes que respiren profundo y se preparen mentalmente para el desafío.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Ahora que hemos activado nuestro cuerpo y nuestra mente, ¡estamos listos para el próximo reto! Respiren profundo y prepárense para su paper programming."</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 5 -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('team_gnius')">
+        <div class="title">🤝 Actividad 5: Team Gnius ⏰ Tiempo: 2.5 minutos</div>
+        <div class="subtitle">Formación de equipos y preparación para el trabajo en equipo en el desafío.</div>
+    </div>
+    <div id="team_gnius" class="content" style="display: none;">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Proyectar Diapositiva 22: Explicar la formación de equipos y la importancia de colaborar.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Genios! Es hora de trabajar en equipo. Formaremos equipos de 2 personas para el desafío de paper programming. Cada uno tendrá un rol: uno será el Programador Principal y el otro el Asistente de Programación. ¡Ambos contribuirán al éxito del equipo!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Proyectar Diapositiva 23: Mostrar un temporizador de 30 segundos para que los estudiantes se organicen en equipos.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Tienen 30 segundos para encontrar a su compañero. ¡Elijan sabiamente, Genios! Aunque trabajarán en equipo, cada uno tendrá una parte importante que hacer en el desafío."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 3 (0.5 minutos):</strong> Proyectar Diapositiva 24: Recordar que cada alumno utilizará su propia Magic Tablet para el reto.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Cada uno de ustedes usará su Magic Tablet para realizar el desafío. Recuerden colaborar y compartir ideas, ¡pero cada uno tendrá que aportar desde su tablet!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 4 (0.5 minutos):</strong> Proyectar Diapositiva 25: Mostrar un temporizador de 30 segundos para que los estudiantes preparen sus tablets.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Tienen 30 segundos para asegurarse de que sus Magic Tablets están listas. ¡Asegúrense de que están cargadas y listas para el reto!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 5 (0.5 minutos):</strong> Sin diapositiva: Explicar la importancia de la comunicación y el trabajo en equipo durante el desafío.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Ahora que tienen todo listo, recuerden que la clave para superar este reto es la colaboración. Trabajar juntos y comunicarse bien es lo que hará que su programación sea un éxito. ¡Vamos equipo!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 6 -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('challenge')">
+        <div class="title">⚙️ Actividad 6: Challenge ⏰ Tiempo: 24.5 minutos</div>
+        <div class="subtitle">Presentación del desafío de paper programming en tres niveles.</div>
+    </div>
+    <div id="challenge" class="content" style="display: none;">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Proyectar Diapositiva 26: Presentar los tres niveles de desafío: Rookie, Master, y Hacker.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Genios! Ha llegado el momento de nuestro gran desafío. Hoy trabajarán en equipo para diseñar un videojuego colaborativo usando paper programming. Tenemos 3 niveles: ROOKIE, MASTER, y HACKER. Cada uno tiene una dificultad distinta, ¡elijan sabiamente!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Proyectar Diapositiva 27: Describir en detalle los tres niveles y las expectativas de cada uno.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Aquí están los tres desafíos: ROOKIE, donde trabajarán juntos para atrapar objetos aleatorios; MASTER, donde además tendrán que evitar objetos peligrosos que restan puntos o habilidades; y HACKER, donde colaborarán para moverse a través de un laberinto lleno de desafíos y obstáculos."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 3 (10 minutos):</strong> Proyectar Diapositiva 28: Explicar que usarán paper programming para diseñar el videojuego colaborativo paso a paso.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Elijan su nivel y trabajen en equipo para escribir cada paso de su videojuego usando paper programming. El objetivo es que sus personajes colaboren y sigan una secuencia lógica para cumplir su misión en el juego, tienen 10 minutos."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 4 (0.5 minutos):</strong> Motivar a los estudiantes a revisar las secuencias para asegurar que todas las acciones colaborativas estén bien coordinadas.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Revisen sus secuencias, Genios. Asegúrense de que los personajes trabajen bien juntos para atrapar objetos, evitar peligros, o avanzar en el laberinto. ¡La clave es la colaboración y la precisión!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 5 (10 minutos):</strong> Proyectar Diapositiva 29: Los estudiantes platican las instrucciones del videojuego colaborativo que diseñaron en paper programming con su compañero.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Ahora es momento de platicar sus secuencias. Lean paso a paso lo que programaron en papel y asegúrense de que las acciones colaborativas funcionen como esperaban, sus compañeros dirán si entienden y parece lógico. ¡Veamos qué tan bien colaboran sus personajes!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 6 (3 minutos):</strong> Proyectar Diapositiva 30: Reflexionar sobre los resultados que se esperan para el diseño del videojuego.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Increíble trabajo, Genios! Ahora reflexionemos: ¿Entendieron las secuencias colaborativas de sus compañeros? ¿Creen que será fácil hacer estos videojuegos la próxima clase? ¡Compartamos nuestras experiencias!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 7 -->
+<div id="activity-7" class="activity">
+    <div class="banner" onclick="toggleContent('easter_egg')">
+        <div class="title">🥚 Actividad 7: Easter Egg ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Desafío oculto para motivar a los estudiantes a aplicar lo aprendido.</div>
+    </div>
+    <div id="easter_egg" class="content" style="display: none;">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Proyectar Diapositiva 31: Anunciar que llegó el momento del Easter Egg, motivando a los estudiantes a descubrirlo.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Genios! ¡Es el momento del Easter Egg! ¿Recuerdan que les mencioné que había una sorpresa escondida en la clase? ¡Aquí está! Presten atención, ¡este reto oculto pondrá a prueba lo que han aprendido!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Proyectar Diapositiva 32: Mostrar la pregunta o reto relacionado con programación que los estudiantes deberán resolver.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Aquí está el reto oculto: ¿Cuándo usaríamos el bloque 'por siempre' en Scratch? ¡Piensen rápido, Genios! ¿Qué harían con este bloque en sus proyectos?"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 3 (1 minuto):</strong> Sin diapositiva: Los estudiantes piensan en la respuesta y algunos se acercan para compartirla con el profesor.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Voy a elegir a algunos de ustedes para que me den su respuesta en voz baja. ¡Piénsenlo bien, porque este reto oculto pondrá a prueba lo que han aprendido!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 4 (1 minuto):</strong> Proyectar Diapositiva 33: Revelar la respuesta correcta y premiar a quienes lo lograron.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "La respuesta correcta es… ¡Usamos el bloque 'por siempre' cuando queremos que una acción o evento ocurra sin parar hasta que el juego termine! ¡Felicidades a quienes lo acertaron! ¡Ganan Mon-e extra!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 8 -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('honor_dojo')">
+        <div class="title">🏅 Actividad 8: Honor de Dojo ⏰ Tiempo: 4 minutos</div>
+        <div class="subtitle">Cierre de la clase con reflexión sobre los objetivos alcanzados y agradecimiento al grupo.</div>
+    </div>
+    <div id="honor_dojo" class="content" style="display: none;">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Proyectar Diapositiva 34: Revisar los tres principales objetivos de la clase y cómo los estudiantes los han cumplido.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Genios, antes de despedirnos, revisemos lo que logramos hoy! Hemos repasado bloques importantes de Scratch, colaborado en paper programming para diseñar videojuegos, y descubierto el Easter Egg. ¡Gran trabajo en equipo!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Sin diapositiva: Agradecer el esfuerzo de todo el grupo por trabajar juntos en los desafíos.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Hoy, todos han hecho un gran esfuerzo trabajando en equipo. ¡Cada uno ha aportado algo valioso! ¡Felicidades por su excelente trabajo colaborativo, Genios!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 3 (3 minutos):</strong> Proyectar Diapositiva 35: Recordar a los estudiantes que deben dejar el salón ordenado antes de finalizar la clase.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Y, como siempre, Genios, vamos a honrar nuestro Dojo. Recuerden recoger sus tablets y materiales, y dejemos el salón tan limpio como los códigos que creamos. ¡Gracias por su increíble esfuerzo hoy!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+   <script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        content.style.display = (content.style.display === "block") ? "none" : "block";
+    }
+
+    function updateContent() {
+        var time = document.getElementById("class-time").value;
+        document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+
+        // Mostrar/ocultar actividades basadas en la duración seleccionada
+        document.getElementById("activity-4").style.display = (time === "50" || time === "45") ? "block" : "none";
+        document.getElementById("activity-2").style.display = (time === "50") ? "block" : "none";
+    }
+
+    // Inicializar el contenido según la selección por defecto
+    updateContent();
+</script>
